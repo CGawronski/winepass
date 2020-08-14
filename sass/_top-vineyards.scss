@@ -1,0 +1,51 @@
+.wineries {
+  grid-column: col-start 7 / full-end;
+  background-color: $color-primary-extra-dark;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-extra-dark,
+    $color-primary-dark
+  );
+  padding: 3rem;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+
+  @media screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    column-gap: 2rem;
+    row-gap: 5vh;
+    align-items: center;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
+  }
+
+  &__img {
+    width: 7rem;
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__rating {
+    color: $color-grey-light-2;
+    text-transform: uppercase;
+    // margin-top: -3px;
+  }
+}
+
+.wineries-heading {
+  color: $color-gold-dark;
+  margin-bottom: 2vh;
+}
